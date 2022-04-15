@@ -8,7 +8,7 @@ def index(request):
         return HttpResponseRedirect(reverse("login"))
     return render(request, "users/user.html")
 
-def login_view(request):
+def loginview(request):
     if request.method == "POST":
         # Accessing username and password from form data
         username = request.POST["username"]
