@@ -1,0 +1,60 @@
+$col : #023571;
+
+body{
+    min-width: 400px;
+    margin: 0px;
+}
+
+
+img{
+    width: 100%;
+}
+
+.main{
+    text-align: center;
+    width: 50%;
+    margin: 10% 25%;
+    border: 2px solid black;
+    padding: 5%;
+    
+    .box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    input{
+        padding: 2%;
+        margin: 10% auto;
+    }
+
+    .last{
+        margin: 10% auto;
+        margin-bottom: 0;
+        transition: all 0.4s;
+        background-color: white;
+        color: $col;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 0.80rem;
+        width: 40%;
+        border: 1px solid $col;
+
+    }
+    .last:hover{
+        background-color: $col;
+        color: white;
+
+    }
+    .last:active{
+        text-decoration: none;
+    }
+    .last:visited{
+        text-decoration: none;
+    }
+    .last:focus{
+        text-decoration: none;
+    }
+    
+}

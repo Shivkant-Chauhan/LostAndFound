@@ -4,6 +4,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import *
 
+alpha="abcdefghijklmnopqrstuvwxyz"
+
 # Create your views here.
 def index(request):
     return render(request, "lostfound/index.html")
@@ -36,7 +38,7 @@ def new_item(request):
         firstName = request.POST["firstName"]
         lastName = request.POST["lastName"]
         email = request.POST["email"]
-        email += "@gmail.com"
+        email += "@iiitdmj.ac.in"
         mobileNumber = request.POST["mobileNumber"]
         rollNumber = request.POST["rollNumber"]
         roomNumber = request.POST["roomNumber"]

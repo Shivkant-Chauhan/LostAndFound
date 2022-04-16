@@ -1,0 +1,53 @@
+body {
+  min-width: 400px;
+  margin: 0px;
+}
+
+img {
+  width: 100%;
+}
+
+.main {
+  text-align: center;
+  width: 50%;
+  margin: 10% 25%;
+  border: 2px solid black;
+  padding: 5%;
+}
+.main .box {
+  display: flex;
+  flex-direction: column;
+}
+.main input {
+  padding: 2%;
+  margin: 10% auto;
+}
+.main .last {
+  margin: 10% auto;
+  margin-bottom: 0;
+  transition: all 0.4s;
+  background-color: white;
+  color: #023571;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  width: 40%;
+  border: 1px solid #023571;
+}
+.main .last:hover {
+  background-color: #023571;
+  color: white;
+}
+.main .last:active {
+  text-decoration: none;
+}
+.main .last:visited {
+  text-decoration: none;
+}
+.main .last:focus {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styleLogin.css.map */

@@ -18,11 +18,11 @@
         <p class="id">PDPM IIITDM Jabalpur</p>
 
         <div class="buttonBody">
-            <form class="button" action="{% url 'newitem' %}">
-                <button>
+            <div class="button">
+                <button id="btn">
                     <i class="fa-solid fa-magnifying-glass"></i> Request for lost item
                 </button>
-            </form>
+            </div>
         </div>
     </div>
 
@@ -71,5 +71,6 @@
             </div>
         </div>
     </div>
+    <script src="{% static 'lostfound/pop.js' %}"> </script>
 </body>
 </html>
