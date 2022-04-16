@@ -1,0 +1,28 @@
+body {
+  min-width: 400px;
+  margin: 0px;
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin: 10% 10% 0 10%;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 10% 10% 10%;
+  flex-wrap: wrap;
+}
+.items .card {
+  margin-top: 10%;
+  width: 45%;
+}
+
+/*# sourceMappingURL=styleitem.css.map */

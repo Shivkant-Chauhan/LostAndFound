@@ -1,0 +1,72 @@
+body{
+    min-width: 400px;
+    margin: 0px;
+}
+
+img{
+    width: 100%;
+}
+
+.header{
+    text-align: center;
+    margin: 10% 10% 0 10%;
+}
+
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 10% 10% 10%;
+    flex-wrap: wrap;
+
+
+    .card{
+        margin-top: 10%;
+        width: 45%;
+    }
+    // .box{
+    //     text-align: center;
+    //     border: 2px solid black;
+    //     width: 45%;
+    //     height: 30rem;
+    //     overflow: hidden;
+    //     transition: all 0.4s;
+
+    //     .img-hover-zoom--brightness {
+    //         transition: transform 2s, filter 1.5s ease-in-out;
+    //         transform-origin: center center;
+    //         filter: brightness(65%);
+    //         overflow: hidden;
+    //         width: 100%;
+    //         transition: all 0.4s;
+    //       }
+          
+    //       /* The Transformation */
+    //       .img-hover-zoom--brightness:hover {
+    //         filter: brightness(100%);
+    //         transform: scale(1.1);
+    //       }
+    //     .title{
+    //         padding: 2%;
+    //         font-size: 1.5rem;
+    //         border: 2px solid black;
+    //         transition: all 0.4s;
+    //     }
+    //     .title:hover{
+    //         font-size: 1.7rem;
+
+    //     }
+    //     .description{
+    //         border: 2px solid black;
+    //         text-align: left;
+    //         padding: 5%;
+    //     }
+        
+    // }
+    // .box:hover{
+
+    //     height: auto;
+    // }
+    
+}

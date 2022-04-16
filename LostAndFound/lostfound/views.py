@@ -62,7 +62,10 @@ def new_item(request):
 def category_view(request, category):
     category = Category.objects.get(title=category)
     items = category.items.all()
-    return HttpResponse(items)
+    return render(request, "lostfound/category.html", {
+        "category": category,
+        "items": items,
+    })
 
 def item_view(request, item_id):
     lost_item = item.objects.get(pk=item_id)
