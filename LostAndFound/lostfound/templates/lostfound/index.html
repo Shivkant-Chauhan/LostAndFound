@@ -1,16 +1,75 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    
+        <link rel="stylesheet" href="{% static 'lostfound/stylefound.css' %}">
+    <script src="https://kit.fontawesome.com/231448ed02.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <img src="/images/mainHeading.jpeg" alt="main college heading" id="mainHead">
+        <a href="https://www.iiitdmj.ac.in/" target="blank">
+            <img class="head" src="{% static 'lostfound/mainHeading.jpeg' %}" alt="logo">
+        </a>
+        <p class="name">Welcome to Lost & Found Portal</p>
+        <p class="id">PDPM IIITDM Jabalpur</p>
+
+        <div class="buttonBody">
+            <form class="button" action="{% url 'newitem' %}">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i> Request for lost item
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="flexboxes">
+        <h2>LOST ITEMS</h2>
+
+        
+        <div class="row">
+            <div class="item">
+                <a href="{% url 'category' 'Clothing' %}">
+                <i class="fa-5x fa-solid fa-shirt"></i>
+                <p>Clothing</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{% url 'category' 'Money' %}">
+                <i class="fa-5x fa-solid fa-dollar-sign"></i>
+                <p>Money</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{% url 'category' 'Personal Belongings' %}">
+                <i class="fa-5x fa-solid fa-umbrella"></i>
+                <p>Personal Belongings</p>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <a href="{% url 'category' 'Electronics' %}">
+                <i class="fa-5x fa-solid fa-laptop"></i>
+                <p>Electronics</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{% url 'category' 'Stationary' %}">
+                <i class="fa-5x fa-solid fa-book"></i>
+                <p>Stationary</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{% url 'category' 'Other' %}">
+                <i class="fa-5x fa-solid fa-toolbox"></i>
+                <p>OTHERS</p>
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

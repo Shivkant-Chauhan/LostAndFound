@@ -1,0 +1,104 @@
+body {
+  margin: 0px;
+}
+
+.head {
+  width: 100%;
+}
+
+.name {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.id {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.buttonBody {
+  margin: 15% auto;
+  background-color: #023571;
+}
+.buttonBody .button {
+  padding: 5%;
+}
+.buttonBody button {
+  width: 30%;
+  background-color: white;
+  color: #023571;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 2px;
+  border: 1px solid #023571;
+  transition: all 0.5s;
+}
+.buttonBody button:hover {
+  text-decoration: none;
+  background-color: #023571;
+  color: white;
+  border: 1px solid white;
+}
+.buttonBody button:active {
+  text-decoration: none;
+}
+.buttonBody button:visited {
+  text-decoration: none;
+}
+.buttonBody button:link {
+  text-decoration: none;
+}
+
+.flexboxes h2 {
+  margin: 10% 0 7% 5%;
+}
+.flexboxes .row {
+  display: flex;
+  margin: 5%;
+  justify-content: space-between;
+}
+.flexboxes .row a {
+  color: white;
+  text-align: center;
+}
+.flexboxes .row a:hover {
+  text-decoration: none;
+}
+.flexboxes .row a:visited {
+  text-decoration: none;
+}
+.flexboxes .row a:active {
+  text-decoration: none;
+}
+.flexboxes .row a:link {
+  text-decoration: none;
+}
+.flexboxes .item {
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 30%;
+  padding: 10% 0 5% 0;
+  background-color: #023571;
+  color: white;
+}
+.flexboxes .item p {
+  opacity: 0;
+  transition: all 0.4s;
+  font-size: 1.3rem;
+}
+.flexboxes .item i {
+  transition: all 0.4s;
+}
+.flexboxes .item:hover i {
+  transform: translateY(-25%);
+}
+.flexboxes .item:hover p {
+  opacity: 1;
+  transform: translateY(25%);
+}
+
+/*# sourceMappingURL=stylefound.css.map */
