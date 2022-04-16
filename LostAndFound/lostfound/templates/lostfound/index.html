@@ -7,7 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% static 'lostfound/stylefound.css' %}">
     <script src="https://kit.fontawesome.com/231448ed02.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+
+    <title>Lost And Found</title>
+<style>
+    .footer{
+        padding: 5%;
+        margin-top: 15%;
+        background-color: rgb(46, 56, 65);
+        color: white;
+    }
+    .icons{
+        margin-top: 5%;
+    }
+    .footer .icons i{
+        margin: 1%;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    a:visited{
+        text-decoration: none;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    a:active{
+        text-decoration: none;
+    }
+
+    .hov:hover{
+        color: rgb(198, 187, 187);
+    }
+
+
+
+
+</style>
 </head>
 <body>
     <div class="container">
@@ -17,14 +56,49 @@
         <p class="name">Welcome to Lost & Found Portal</p>
         <p class="id">PDPM IIITDM Jabalpur</p>
 
+        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{%static 'lostfound/2.webp' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{%static 'lostfound/3.webp' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{%static 'lostfound/1.webp' %}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> -->
+    </div>
         <div class="buttonBody">
             <div class="button">
-                <button id="btn">
+                <button id="btn" style="margin-right: 10%;">
                     <i class="fa-solid fa-magnifying-glass"></i> Request for lost item
                 </button>
+                <a href="{% url 'my_requests' %}"><button id="btn" type="submit" style="margin-right: 10%;">
+                    My Requests / LogOut
+                </button> </a>
             </div>
+            <!-- <div class="button">
+                <button id="btn">
+                 My Requests / LogOut
+                </button>
+            </div> -->
         </div>
-    </div>
+    <!-- </div> -->
 
     <div class="flexboxes">
         <h2>LOST ITEMS</h2>
@@ -69,6 +143,30 @@
                 <p>OTHERS</p>
                 </a>
             </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h3>CONTACT US</h3>
+        <hr style="color: white;">
+        <a class="hov" href="https://www.facebook.com/geeks.IIITJ/">
+            <p>BitByte - The Programming Club</p>
+        </a>
+        <a class="hov" href="https://www.iiitdmj.ac.in/">
+            <p>PDPM IIITDM Jabalpur</p>
+        </a>
+        <div class="icons">
+            <a class="sc" href="https://twitter.com/iiitdmjbp?t=j6twHMLrmQOhK7BjkSoIuQ&s=08">
+            <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/iiitdm.jbp/">
+            <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com/iiitdm_jabalpur?igshid=YmMyMTA2M2Y=">
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCODKL--xMCqXIK31cRdOWOw">
+            <i class="fa-brands fa-youtube"></i>
+            </a>
         </div>
     </div>
     <script src="{% static 'lostfound/pop.js' %}"> </script>

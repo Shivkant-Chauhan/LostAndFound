@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  min-width: 400px;
 }
 
 .head {
@@ -17,8 +18,15 @@ body {
   font-size: 2.5rem;
 }
 
+.container {
+  background-image: url("2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 15%;
+}
+
 .buttonBody {
-  margin: 15% auto;
+  margin: 5% auto;
   background-color: #023571;
 }
 .buttonBody .button {

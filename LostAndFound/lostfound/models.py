@@ -28,7 +28,7 @@ class item(models.Model):
     description = models.CharField(max_length=500)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="items")
     image = models.ImageField(upload_to='images/', null=True, blank=True)
-    #lost_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="lost")
+    lost_by = models.ForeignKey(User, default=0, on_delete=models.CASCADE, related_name="lost")
     #found_by = models.ForeignKey(User,blank=True, null=True, on_delete=models.CASCADE, related_name="found")
 
     def __str__(self):

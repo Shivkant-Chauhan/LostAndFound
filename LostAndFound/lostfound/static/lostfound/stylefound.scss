@@ -2,6 +2,7 @@ $col: #023571;
 
 body{
     margin: 0px;
+    min-width: 400px;
 }
 
 .head{
@@ -19,8 +20,16 @@ body{
 
 }
 
+
+.container{
+    background-image: url("2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 15%;
+}
+
 .buttonBody{
-    margin: 15% auto;
+    margin: 5% auto;
     background-color: $col;
 
     .button{

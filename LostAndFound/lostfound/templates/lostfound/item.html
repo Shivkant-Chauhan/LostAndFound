@@ -55,7 +55,9 @@
         <h2>FULL DETAILS for</h2>
         <h3>{{ item.title }}</h3>
 
+        {% if item.image %}
         <img src="{{ item.image.url }}" alt="">
+        {% endif %}
 
         <div class="description">
             {{ item.description }}
@@ -71,7 +73,15 @@
             <br>
             <strong> Email: </strong> {{ item.email }}
         </div>
+        {% if request.user == item.lost_by %}
+        <form action="{% url 'found' %}" method = "post">
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{ item.id }}">
+            <input type="submit" class="btn btn-success" value = "Found My Item">
+        </form>
+        {% endif %}
     </div>
+    
 
 </body>
 

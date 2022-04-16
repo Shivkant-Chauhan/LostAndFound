@@ -4,10 +4,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import *
 
-alpha="abcdefghijklmnopqrstuvwxyz"
-
 # Create your views here.
 def index(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('login'))
     return render(request, "lostfound/index.html")
 
 def login_view(request):
@@ -48,18 +48,24 @@ def new_item(request):
 
         image = request.FILES.get('image')
 
-        it = item(person_first_name = firstName, person_last_name = lastName, email = email, phone_number = mobileNumber, roll_number = rollNumber, room_number = roomNumber, title = title, description = description, category=category, image=image)
+        it = item(person_first_name = firstName, person_last_name = lastName, email = email, phone_number = mobileNumber, roll_number = rollNumber, room_number = roomNumber, title = title, description = description, category=category, image=image, lost_by=request.user)
 
         it.save()
         Category.objects.get(title=category).items.add(it)
 
         return HttpResponseRedirect(reverse("item", args=[str(it.id)]))
 
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('login'))
+
     return render(request, "lostfound/itemform.html", {
         "categories": Category.objects.all(), 
     })
 
 def category_view(request, category):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('login'))
+
     category = Category.objects.get(title=category)
     items = category.items.all()
     return render(request, "lostfound/category.html", {
@@ -67,8 +73,28 @@ def category_view(request, category):
         "items": items,
     })
 
+
 def item_view(request, item_id):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('login'))
+
     lost_item = item.objects.get(pk=item_id)
     return render(request, "lostfound/item.html", {
         "item": lost_item,
     })
+
+def my_requests(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('login'))
+
+    items = request.user.lost.all()
+
+    return render(request, "lostfound/my_requests.html", {
+        "items": items
+    })
+
+def found(request):
+    if request.method == "POST":
+        entry = item.objects.filter(pk=request.POST["id"])
+        entry.delete()
+        return HttpResponseRedirect(reverse('my_requests'))
